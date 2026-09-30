@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Dashboard</title></head>
+<body>
+<h1>Admin Dashboard</h1>
+
+<a href="/add">Add Article</a>
+
+{% for post in posts %}
+<p>
+{{ post }}
+<a href="/edit/{{ post }}">Edit</a>
+<a href="/delete/{{ post }}">Delete</a>
+</p>
+{% endfor %}
+
+</body>
+</html>

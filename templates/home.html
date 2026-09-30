@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Personal Blog</title></head>
+<body>
+<h1>Personal Blog</h1>
+
+{% for post in posts %}
+<h2><a href="/article/{{ post.title.lower().replace(' ', '-') }}.json">{{ post.title }}</a></h2>
+<p>{{ post.date }}</p>
+<p>{{ post.content[:150] }}...</p>
+<hr>
+{% endfor %}
+
+<a href="/login">Admin Login</a>
+</body>
+</html>
